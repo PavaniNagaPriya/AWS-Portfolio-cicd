@@ -850,6 +850,34 @@ strong { color: var(--color-white); font-weight: 600; }
     font-size: .95rem;
 }
 
+/* Clickable certificate cards */
+.cert-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog.featured.cert-link { display: grid; }
+
+.cert-link:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 3px;
+}
+
+.cert-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin-top: .8rem;
+    font-size: .88rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.cert-cta i { font-size: .75rem; transition: transform .2s ease; }
+.cert-link:hover .cert-cta i { transform: translate(2px, -2px); }
+.cert-link:hover h4 { color: var(--color-secondary); }
+
 /* Featured certification: spans the full row, cover on the left */
 .blog.featured {
     grid-column: 1 / -1;
