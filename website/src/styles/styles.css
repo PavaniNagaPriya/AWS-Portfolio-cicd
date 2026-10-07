@@ -850,6 +850,30 @@ strong { color: var(--color-white); font-weight: 600; }
     font-size: .95rem;
 }
 
+/* Featured certification: spans the full row, cover on the left */
+.blog.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+}
+
+.blog.featured .blog-cover { height: auto; min-height: 150px; }
+.blog.featured .blog-cover i { font-size: 4rem; color: var(--color-secondary); }
+
+.blog.featured .blog-text {
+    border-top: none;
+    border-left: 6px solid var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 760px) {
+    .blog.featured { grid-template-columns: 1fr; }
+    .blog.featured .blog-cover { min-height: 140px; }
+    .blog.featured .blog-text { border-left: none; border-top: 6px solid var(--color-secondary); }
+}
+
 /* ---------- Contact ---------- */
 .contact-content-con {
     display: flex;
