@@ -660,6 +660,7 @@ strong { color: var(--color-white); font-weight: 600; }
     justify-content: center;
     color: rgba(255, 255, 255, .92);
     overflow: hidden;
+    isolation: isolate; /* keep the icon/badge z-index inside the cover, below the hover overlay */
 }
 
 .cover::after {   /* subtle grid texture */
@@ -724,6 +725,7 @@ strong { color: var(--color-white); font-weight: 600; }
 
 .hover-items {
     position: absolute;
+    z-index: 2;
     inset: 0;
     background-color: var(--color-secondary);
     border-radius: var(--br-md);
